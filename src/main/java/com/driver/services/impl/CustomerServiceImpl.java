@@ -54,7 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
 		List<Driver> getAllDrivers=driverRepository2.findAll();
 		for(Driver driver:getAllDrivers){
 			if(driver.getCab().getAvailable()==Boolean.TRUE){
-				if((driver==null)||getdriver.getDriverId()>driver.getDriverId()){
+				if((getdriver==null)||getdriver.getDriverId()>driver.getDriverId()){
 					getdriver=driver;
 				}
 			}
@@ -62,8 +62,6 @@ public class CustomerServiceImpl implements CustomerService {
 		if (getdriver==null){
 			throw new Exception("No cab available!");
 		}
-
-
 
 
 
